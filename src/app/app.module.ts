@@ -5,19 +5,15 @@ import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { SecondComponent } from './second/second.component';
-import { ThirdComponent } from './third/third.component';
-import { AppRoutingModule } from './app-routing.module';
+import {CoreModule} from './core/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SecondComponent,
-    ThirdComponent
+    AppComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'awesome-seo'}),
-    AppRoutingModule
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
